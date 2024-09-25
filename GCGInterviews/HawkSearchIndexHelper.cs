@@ -142,10 +142,6 @@ namespace Znode.Engine.ERPConnector
         private PublishProductListModel GetZnodePublishedProductList()
         {
             var publishProductService = GetService<IPublishProductService>();
-            var expands = new NameValueCollection
-            {
-                { "seo", null }
-            };
             return publishProductService.GetPublishProductList(expands,
                 GetRequiredFilters(), sorts: new NameValueCollection(), page: new NameValueCollection());
         }
